@@ -1,3 +1,4 @@
+/* new Updated 1 */
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
@@ -798,6 +799,7 @@ body:has(.flipback-popup-container.show) {
     .fliping-content-section.home-flip-card {
         margin: 0 0px -58px 0px !important;
         width: 100%;
+        padding: 0 20px;
 
         & .rotating-section-container {
             & .rotating-section-content-sides-container {
