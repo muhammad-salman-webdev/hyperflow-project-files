@@ -148,7 +148,7 @@ body:has(.flipback-popup-container.show) {
 }
 
 .fliping-content-section.home-flip-card {
-    margin: 0 7px -58px 7px !important;
+    margin: 0 0px -58px 0px !important;
 
     .flipback-popup-container {
         position: fixed;
@@ -763,7 +763,7 @@ body:has(.flipback-popup-container.show) {
 
                 .side-toggle-btn {
                     position: absolute;
-                    bottom: px;
+                    bottom: 40px;
                     right: 40px;
 
                     button {
@@ -796,6 +796,8 @@ body:has(.flipback-popup-container.show) {
 /* ((((((((((((((((((((((((((((((())))))))))))))))))))))))))))))) */
 @media (max-width: 1600px) {
     .fliping-content-section.home-flip-card {
+        margin: 0 5px -58px 5px !important;
+
         & .rotating-section-container {
             & .rotating-section-content-sides-container {
                 & .rotating-content-front-side-container {
