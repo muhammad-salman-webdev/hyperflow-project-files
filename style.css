@@ -935,7 +935,8 @@ body:has(.flipback-popup-container.show) {
                                     height: unset !important;
                                     max-width: 800px;
                                     position: relative;
-                                    /* left: -10%; */
+                                    left: 2%;
+                                    bottom: -40px;
                                 }
                             }
                         }
