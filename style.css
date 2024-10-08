@@ -722,7 +722,8 @@ body:has(.flipback-popup-container.show) {
                                 display: flex;
                                 flex-direction: column;
                                 text-align: center;
-                                padding: 0 24px;
+                                padding: 0;
+                                min-width: 33%;
                                 position: relative;
 
                                 &:not(:last-child)::before {
@@ -760,7 +761,7 @@ body:has(.flipback-popup-container.show) {
 
                 .side-toggle-btn {
                     position: absolute;
-                    bottom: 44px;
+                    bottom: px;
                     right: 40px;
 
                     button {
@@ -1030,8 +1031,8 @@ body:has(.flipback-popup-container.show) {
                     .backside-content-container {
                         padding: 50px !important;
                         flex-direction: column !important;
-                        justify-content: space-between !important;
-                        padding: 80px 25px 100px !important;
+                        justify-content: start !important;
+                        padding: 120px 18px 100px !important;
                         position: relative;
 
                         ._content {
@@ -1044,18 +1045,25 @@ body:has(.flipback-popup-container.show) {
 
                             h2 {
                                 margin: 0;
+                                font-size: 32px;
+                                font-weight: 600;
+                                line-height: 38px;
                             }
 
                             .desc {
                                 p {
                                     max-width: 700px;
                                     width: 100%;
+                                    font-size: 14.2px;
+                                    font-weight: 400;
+                                    line-height: 20.88px;
+                                    letter-spacing: -0.36000001430511475px;
                                 }
                             }
 
                             ._btn {
                                 position: absolute;
-                                bottom: 30px;
+                                bottom: 90px;
                                 left: 30px;
                                 right: 30px;
                                 width: calc(100% - 60px);
@@ -1125,7 +1133,7 @@ body:has(.flipback-popup-container.show) {
                         .side-toggle-btn {
                             bottom: unset;
                             right: unset;
-                            top: 30px;
+                            top: 40px;
                             left: 30px;
                         }
                     }
