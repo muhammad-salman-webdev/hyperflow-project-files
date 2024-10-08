@@ -3,7 +3,7 @@ const quoteFormMain = document.getElementById("quote-form-container");
 quoteFormMain.style.display = "none";
 const contactFormMain = document.getElementById("contact-form-hideOn");
 const formPrivacyContent = document.getElementById(
-  "from-pricvay-content-ShowOn"
+  "from-privcay-content-ShowOn"
 );
 
 console.log(GetQuoteFormBtn, quoteFormMain);
