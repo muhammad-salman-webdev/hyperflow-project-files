@@ -148,6 +148,11 @@ body:has(.flipback-popup-container.show) {
     overflow: hidden;
 }
 
+.e-con-inner:has(.fliping-content-section.home-flip-card) {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
 .fliping-content-section.home-flip-card {
     margin: 0 0px -58px 0px !important;
 
@@ -268,9 +273,10 @@ body:has(.flipback-popup-container.show) {
     }
 
     .rotating-section-container {
-        max-width: 1721px;
+        max-width: 100%;
         perspective: 2000px;
         margin: 50px auto;
+        padding: 0 10px;
 
         &:has(.toggle) {
             z-index: 9;
