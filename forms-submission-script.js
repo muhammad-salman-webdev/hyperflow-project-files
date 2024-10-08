@@ -6,11 +6,13 @@ const formPrivacyContent = document.getElementById(
   "from-privcay-content-ShowOn"
 );
 
+if (formPrivacyContent) formPrivacyContent.style.display = "none";
+
 console.log(GetQuoteFormBtn, quoteFormMain);
 GetQuoteFormBtn.addEventListener("click", () => {
   GetQuoteFormBtn.style.display = "none";
   quoteFormMain.style.display = "block";
 
   if (contactFormMain) contactFormMain.style.display = "none";
-  if (formPrivacyContent) formPrivacyContent.style.display = "none";
+  if (formPrivacyContent) formPrivacyContent.style.display = "block";
 });
