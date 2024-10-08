@@ -1063,10 +1063,10 @@ body:has(.flipback-popup-container.show) {
 
                             ._btn {
                                 position: absolute;
-                                bottom: 90px;
-                                left: 30px;
-                                right: 30px;
-                                width: calc(100% - 60px);
+                                bottom: 140px;
+                                left: 18px;
+                                right: 18px;
+                                width: calc(100% - 36px);
                                 padding: 10px 0;
                             }
                         }
@@ -1179,6 +1179,31 @@ body:has(.flipback-popup-container.show) {
                                 .popup-btn {
                                     display: none;
                                 }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 376px) {
+    .fliping-content-section.home-flip-card {
+        .rotating-section-container {
+            .rotating-section-content-sides-container {
+                height: 700px;
+
+                &.toggle {
+                    height: 850px;
+                }
+
+                .rotating-content-back-side-container {
+                    .backside-content-container {
+                        ._content {
+                            ._btn {
+                                position: absolute;
+                                bottom: 70px;
                             }
                         }
                     }
