@@ -148,6 +148,8 @@ body:has(.flipback-popup-container.show) {
 }
 
 .fliping-content-section.home-flip-card {
+    margin: 0 7px -58px 7px !important;
+
     .flipback-popup-container {
         position: fixed;
         inset: 0;
