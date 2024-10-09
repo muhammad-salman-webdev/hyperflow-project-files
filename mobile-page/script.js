@@ -1,5 +1,3 @@
-/* Updated 01 */
-
 // Select all elements with the class "dynamic" that have the attribute "data-write-infinite-text"
 const elements = document.querySelectorAll(
   ".dynamic[data-write-infinite-text]"
@@ -7,16 +5,10 @@ const elements = document.querySelectorAll(
 
 // Loop through each element to create a typing effect
 elements.forEach((element, index) => {
-  if (index != 0) {
-    element.querySelector(".blinker").style.display = "none";
-    return;
-  }
-  // Select the first <span> element inside the current element
   const textElement = element.querySelector("span:first-child");
-  // Store the original text content for typing and deleting
   const originalText = textElement.textContent;
-  let charIndex = 0; // To track the current character position
-  let isDeleting = false; // To toggle between typing and deleting
+  let charIndex = 0;
+  let isDeleting = false;
 
   // Function to create the typing and deleting effect
   function typeEffect() {
@@ -46,7 +38,8 @@ elements.forEach((element, index) => {
     }
   }
 
-  typeEffect(); // Start the typing effect for each element
+  // Start typing effect with a delay of 0.3s * index (adds a staggered start)
+  setTimeout(typeEffect, index * 600);
 });
 
 // Select all swiper popup elements
@@ -116,47 +109,50 @@ allFlipCardsElems.forEach((flipCard) => {
   const popupOpenBtn = flipCard.querySelector(
     "a[data-learn-more-popup-open-btn]"
   );
-  // Select the popup container
-  const popup = flipCard.querySelector(
-    ".rotating-section-popup-main[data-flip-card-toggle-popup-container]"
-  );
-  // Select the close button inside the popup
-  const popupCloseBtn = popup.querySelector(
-    "button.c_popup-close-btn[data-flip-popup-close-btn]"
-  );
-
-  const body = document.body; // Reference to the body element to disable scrolling when popup is open
 
   const popupOverlay = flipCard.querySelector(
     ".fliping-overlay[data-fliping-overlay]"
   );
+  if (popupOpenBtn) {
+    // Select the popup container
+    const popup = flipCard.querySelector(
+      ".rotating-section-popup-main[data-flip-card-toggle-popup-container]"
+    );
+    // Select the close button inside the popup
+    const popupCloseBtn = popup.querySelector(
+      "button.c_popup-close-btn[data-flip-popup-close-btn]"
+    );
 
-  // Add click event listener to the "Learn More" button to show the popup
-  popupOpenBtn.addEventListener("click", (e) => {
-    e.preventDefault(); // Prevent default link behavior
-    popup.classList.add("show"); // Show the popup
-    body.classList.add("no-scroll"); // Disable scrolling on the body
+    const body = document.body; // Reference to the body element to disable scrolling when popup is open
 
-    setTimeout(() => {
-      popup.scrollTo({ top: 0, behavior: "smooth" }); // Scroll popup content to the top smoothly
-      popup.classList.add("anim"); // Add animation class for popup
-    }, 10); // Delay to ensure popup is fully visible before animating
-  });
+    // Add click event listener to the "Learn More" button to show the popup
 
-  function closePopup() {
-    popup.classList.remove("anim"); // Remove animation class
-    body.classList.remove("no-scroll"); // Enable scrolling on the body again
+    popupOpenBtn.addEventListener("click", (e) => {
+      e.preventDefault(); // Prevent default link behavior
+      popup.classList.add("show"); // Show the popup
+      body.classList.add("no-scroll"); // Disable scrolling on the body
 
-    setTimeout(() => {
-      popup.classList.remove("show"); // Hide the popup
-    }, 300); // Delay to ensure the closing animation finishes
+      setTimeout(() => {
+        popup.scrollTo({ top: 0, behavior: "smooth" }); // Scroll popup content to the top smoothly
+        popup.classList.add("anim"); // Add animation class for popup
+      }, 10); // Delay to ensure popup is fully visible before animating
+    });
+
+    function closePopup() {
+      popup.classList.remove("anim"); // Remove animation class
+      body.classList.remove("no-scroll"); // Enable scrolling on the body again
+
+      setTimeout(() => {
+        popup.classList.remove("show"); // Hide the popup
+      }, 300); // Delay to ensure the closing animation finishes
+    }
+
+    // Add click event listener to the close button to hide the popup
+    popupCloseBtn.addEventListener("click", closePopup);
+    popup.addEventListener("click", (e) => {
+      e.target === popup ? closePopup() : "";
+    });
   }
-
-  // Add click event listener to the close button to hide the popup
-  popupCloseBtn.addEventListener("click", closePopup);
-  popup.addEventListener("click", (e) => {
-    e.target === popup ? closePopup() : "";
-  });
 
   // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -171,12 +167,6 @@ allFlipCardsElems.forEach((flipCard) => {
   );
   // Add click event listener to toggle the flip card
   toggleBtn.addEventListener("click", () => {
-    allFlipCardsElems.forEach((_container) => {
-      const _fc = _container.querySelector(
-        ".rotating-section-content-sides-container[data-toggle-card-flip]"
-      );
-      _fc.classList.remove("toggle");
-    });
     _flipCard.classList.add("toggle"); // Add or remove the "toggle" class to flip the card
     popupOverlay.classList.add("show");
     popupOverlay.style.height = document.body.scrollHeight + "px";
@@ -200,6 +190,8 @@ allFlipCardsElems.forEach((flipCard) => {
 
   // Add click event listener to flip the card back
   toggleFrontBtn.addEventListener("click", flipToFront);
+  popupOverlay.addEventListener("click", flipToFront);
+
   // (((((((((((((((((((((((((((((((())))))))))))))))))))))))))))))))
 
   const galleryBtns = flipCard.querySelectorAll(

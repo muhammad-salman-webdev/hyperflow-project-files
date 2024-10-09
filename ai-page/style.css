@@ -1,3 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* &&&&&&&&&7 */
 /* Updated 01 */
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
 
@@ -262,7 +274,7 @@ body.no-scroll {
         margin: 50px auto;
 
         &:has(.toggle) {
-            z-index: 99999;
+            z-index: 99;
             position: relative;
         }
 
@@ -283,8 +295,7 @@ body.no-scroll {
 
             &.toggle {
                 transform: rotateX(0deg);
-                box-shadow: -3px -1px 24px 4px #a4a2a24f;
-                z-index: 9999;
+                z-index: 99;
             }
 
             .rotating-content-front-side-container {
@@ -536,6 +547,10 @@ body.no-scroll {
 
                             i {
                                 margin: 0 0 0px 6px;
+                            }
+
+                            &:hover {
+                                text-decoration: none;
                             }
                         }
                     }
