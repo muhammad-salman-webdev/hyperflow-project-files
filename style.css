@@ -191,8 +191,8 @@ body:has(.flipback-popup-container.show) {
             display: grid;
             border-radius: 20px;
             place-items: center;
-            width: 90%;
-            max-width: 1400px;
+            width: 85%;
+            max-width: 1200px;
 
             video {
                 border-radius: 20px;
