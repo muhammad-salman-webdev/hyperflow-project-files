@@ -1,4 +1,4 @@
-// Updated 01
+// Updated 02
 
 // Select all elements with the class "dynamic" that have the attribute "data-write-infinite-text"
 const elements = document.querySelectorAll(
@@ -195,15 +195,10 @@ allFlipCardsElems.forEach((flipCard) => {
   function flipToFront() {
     _flipCard.classList.remove("toggle"); // Add or remove the "toggle" class to flip the card back
     popupOverlay.classList.remove("anim");
-    setTimeout(() => {
-      popupOverlay.classList.remove("show");
-    }, 700);
   }
 
   // Add click event listener to flip the card back
   toggleFrontBtn.addEventListener("click", flipToFront);
-  popupOverlay.addEventListener("click", flipToFront);
-
   // (((((((((((((((((((((((((((((((())))))))))))))))))))))))))))))))
 
   const galleryBtns = flipCard.querySelectorAll(
