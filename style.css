@@ -1104,8 +1104,8 @@ body:has(.flipback-popup-container.show) {
                                 right: 18px;
                                 width: calc(100% - 36px);
                                 padding: 10px 0;
-                                bottom: 100px;
 
+                                /* bottom: 100px; */
                                 i {
                                     display: none;
                                 }
