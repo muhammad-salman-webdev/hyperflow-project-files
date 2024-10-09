@@ -1,3 +1,5 @@
+// Updated 01
+
 // Select all elements with the class "dynamic" that have the attribute "data-write-infinite-text"
 const elements = document.querySelectorAll(
   ".dynamic[data-write-infinite-text]"
@@ -5,6 +7,10 @@ const elements = document.querySelectorAll(
 
 // Loop through each element to create a typing effect
 elements.forEach((element, index) => {
+  if (index != 0) {
+    element.querySelector(".blinker").style.display = "none";
+    return;
+  }
   const textElement = element.querySelector("span:first-child");
   const originalText = textElement.textContent;
   let charIndex = 0;
@@ -167,6 +173,12 @@ allFlipCardsElems.forEach((flipCard) => {
   );
   // Add click event listener to toggle the flip card
   toggleBtn.addEventListener("click", () => {
+    allFlipCardsElems.forEach((_container) => {
+      const _fc = _container.querySelector(
+        ".rotating-section-content-sides-container[data-toggle-card-flip]"
+      );
+      _fc.classList.remove("toggle");
+    });
     _flipCard.classList.add("toggle"); // Add or remove the "toggle" class to flip the card
     popupOverlay.classList.add("show");
     popupOverlay.style.height = document.body.scrollHeight + "px";
