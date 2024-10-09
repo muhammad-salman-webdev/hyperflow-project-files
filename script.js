@@ -168,9 +168,6 @@ allFlipCardsElems.forEach((flipCard) => {
   // Add click event listener to toggle the flip card
   toggleBtn.addEventListener("click", () => {
     _flipCard.classList.add("toggle"); // Add or remove the "toggle" class to flip the card
-    //  &&&&&&&&&&&&&&&&&&&&&&&&&&&&
-    videoPlayPauseBtn.click();
-    flipBackVideo.currentTime = 0;
   });
 
   // Select the back side toggle button
@@ -181,7 +178,13 @@ allFlipCardsElems.forEach((flipCard) => {
   function flipToFront() {
     _flipCard.classList.remove("toggle"); // Add or remove the "toggle" class to flip the card back
     popupOverlay.classList.remove("anim");
-    setTimeout(() => {}, 700);
+    //  &&&&&&&&&&&&&&&&&&&&&&&&&&&&
+    flipBackVideo.pause();
+    flipBackVideo.currentTime = 0;
+
+    flipBackVideoSection.classList.remove("video-is-playing");
+    btnIcon.classList.add("fa-play");
+    btnIcon.classList.remove("fa-pause");
   }
 
   // Add click event listener to flip the card back
