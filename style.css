@@ -496,7 +496,7 @@ body:has(.flipback-popup-container.show) {
 
                     ._content {
                         width: 100%;
-                        max-width: 630px;
+                        max-width: 600px;
 
                         .label {
                             max-width: max-content;
@@ -1082,6 +1082,7 @@ body:has(.flipback-popup-container.show) {
                                 font-size: 32px;
                                 font-weight: 600;
                                 line-height: 38px;
+                                max-width: 280px;
                             }
 
                             .desc {
@@ -1099,6 +1100,7 @@ body:has(.flipback-popup-container.show) {
                                 position: absolute;
                                 bottom: 140px;
                                 left: 18px;
+                                bottom: 60px;
                                 right: 18px;
                                 width: calc(100% - 36px);
                                 padding: 10px 0;
