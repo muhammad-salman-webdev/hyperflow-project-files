@@ -169,7 +169,7 @@ allFlipCardsElems.forEach((flipCard) => {
   toggleBtn.addEventListener("click", () => {
     _flipCard.classList.add("toggle"); // Add or remove the "toggle" class to flip the card
     //  &&&&&&&&&&&&&&&&&&&&&&&&&&&&
-    homeFlipVideoPlayBtn.click();
+    videoPlayPauseBtn.click();
     flipBackVideo.currentTime = 0;
   });
 
