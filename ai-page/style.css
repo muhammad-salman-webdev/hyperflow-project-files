@@ -1919,7 +1919,8 @@ body.no-scroll {
         top: 0;
         height: 1px;
         width: 0%;
-        background-color: #131314;
+        /* background-color: #131314; */
+        border-top: 1px solid #131314;
         transition: width 1s;
     }
 
