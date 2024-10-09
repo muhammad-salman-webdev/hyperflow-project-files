@@ -150,7 +150,7 @@ body:has(.flipback-popup-container.show) {
 
 .e-con-inner:has(.fliping-content-section.home-flip-card) {
     width: 100% !important;
-    max-width: 100% !important;
+    max-width: 90% !important;
 }
 
 .fliping-content-section.home-flip-card {
@@ -803,9 +803,9 @@ body:has(.flipback-popup-container.show) {
 /* ((((((((((((((((((((((((((((((())))))))))))))))))))))))))))))) */
 @media (max-width: 1600px) {
     .fliping-content-section.home-flip-card {
-        margin: 0 0px -58px 0px !important;
+        margin: 0 auto -58px !important;
         width: 100%;
-        padding: 0 20px;
+        padding: 0;
 
         & .rotating-section-container {
             & .rotating-section-content-sides-container {
@@ -914,6 +914,9 @@ body:has(.flipback-popup-container.show) {
 
 @media (max-width: 1200px) {
     .fliping-content-section.home-flip-card {
+        width: 92%;
+        max-width: 92%;
+
         .rotating-section-container {
             .rotating-section-content-sides-container {
                 height: 900px;
