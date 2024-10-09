@@ -1,3 +1,5 @@
+/* Updated 01 */
+
 // Select all elements with the class "dynamic" that have the attribute "data-write-infinite-text"
 const elements = document.querySelectorAll(
   ".dynamic[data-write-infinite-text]"
