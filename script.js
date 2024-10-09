@@ -177,7 +177,7 @@ allFlipCardsElems.forEach((flipCard) => {
 
   function flipToFront() {
     _flipCard.classList.remove("toggle"); // Add or remove the "toggle" class to flip the card back
-    popupOverlay.classList.remove("anim");
+    // popupOverlay.classList.remove("anim");
     //  &&&&&&&&&&&&&&&&&&&&&&&&&&&&
     flipBackVideo.pause();
     flipBackVideo.currentTime = 0;
