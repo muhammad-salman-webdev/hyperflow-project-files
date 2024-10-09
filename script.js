@@ -168,8 +168,9 @@ allFlipCardsElems.forEach((flipCard) => {
   // Add click event listener to toggle the flip card
   toggleBtn.addEventListener("click", () => {
     _flipCard.classList.add("toggle"); // Add or remove the "toggle" class to flip the card
-
-    setTimeout(() => {}, 10);
+    //  &&&&&&&&&&&&&&&&&&&&&&&&&&&&
+    homeFlipVideoPlayBtn.click();
+    flipBackVideo.currentTime = 0;
   });
 
   // Select the back side toggle button
