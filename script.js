@@ -175,18 +175,6 @@ allFlipCardsElems.forEach((flipCard) => {
     ".rotating-content-back-side-container .side-toggle-btn button[data-flip-toggle-btn]"
   );
 
-  function flipToFront() {
-    _flipCard.classList.remove("toggle"); // Add or remove the "toggle" class to flip the card back
-    // popupOverlay.classList.remove("anim");
-    //  &&&&&&&&&&&&&&&&&&&&&&&&&&&&
-    flipBackVideo.pause();
-    flipBackVideo.currentTime = 0;
-
-    flipBackVideoSection.classList.remove("video-is-playing");
-    btnIcon.classList.add("fa-play");
-    btnIcon.classList.remove("fa-pause");
-  }
-
   // Add click event listener to flip the card back
   toggleFrontBtn.addEventListener("click", flipToFront);
 
@@ -375,6 +363,23 @@ allFlipCardsElems.forEach((flipCard) => {
     }
     homeFlipVideoPlayBtn.classList.toggle("playing");
   });
+
+  function flipToFront() {
+    console.log("hi");
+    _flipCard.classList.remove("toggle"); // Add or remove the "toggle" class to flip the card back
+    console.log(_flipCard);
+    // popupOverlay.classList.remove("anim");
+    //  &&&&&&&&&&&&&&&&&&&&&&&&&&&&
+    flipBackVideo.pause();
+    flipBackVideo.currentTime = 0;
+    console.log(flipBackVideo);
+
+    flipBackVideoSection.classList.remove("video-is-playing");
+    console.log(flipBackVideoSection);
+    btnIcon.classList.add("fa-play");
+    console.log(btnIcon);
+    btnIcon.classList.remove("fa-pause");
+  }
 });
 
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
