@@ -914,9 +914,6 @@ body:has(.flipback-popup-container.show) {
 
 @media (max-width: 1200px) {
     .fliping-content-section.home-flip-card {
-        width: 92%;
-        max-width: 92%;
-
         .rotating-section-container {
             .rotating-section-content-sides-container {
                 height: 900px;
@@ -1005,6 +1002,13 @@ body:has(.flipback-popup-container.show) {
                 }
             }
         }
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 766px) {
+    .fliping-content-section.home-flip-card {
+        width: 92%;
+        max-width: 92%;
     }
 }
 
