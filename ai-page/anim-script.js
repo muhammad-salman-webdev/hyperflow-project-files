@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
       var windowHeight = window.innerHeight;
 
       // Check if the element is in view
-      if (distance < windowHeight - 100) {
+      if (distance < windowHeight - 10) {
         // Adjust -100 for earlier/later trigger
         element.classList.add("anim");
       }
