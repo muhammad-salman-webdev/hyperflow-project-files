@@ -1253,3 +1253,17 @@ body:has(.flipback-popup-container.show) {
         }
     }
 }
+
+@media (min-width: 1600px) {
+    .fliping-content-section.home-flip-card {
+        & .rotating-section-container {
+            & .rotating-section-content-sides-container {
+                & .rotating-content-front-side-container {
+                    .side-content-container {
+                        padding-left: 185px
+                    }
+                }
+            }
+        }
+    }
+}
