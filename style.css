@@ -639,7 +639,6 @@ body:has(.flipback-popup-container.show) {
                     width: 100%;
                     max-width: 700px;
                     position: relative;
-                    overflow: hidden;
 
                     .video-container {
                         aspect-ratio: 1.78;
@@ -705,14 +704,14 @@ body:has(.flipback-popup-container.show) {
 
                             .popup-btn {
                                 position: absolute;
-                                right: 12px;
-                                top: 16px;
+                                right: -32px;
+                                top: 0px;
                                 display: flex;
                                 opacity: 0;
                                 transition: all 0.3s ease;
 
                                 img {
-                                    width: 20px;
+                                    width: 18px;
                                     cursor: pointer;
                                 }
                             }
@@ -871,6 +870,24 @@ body:has(.flipback-popup-container.show) {
                                             margin: 8px 0 5px;
                                         }
                                     }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .fliping-content-section.home-flip-card {
+        & .rotating-section-container {
+            & .rotating-section-content-sides-container {
+                & .rotating-content-back-side-container {
+                    & .backside-content-img {
+                        & .video-container {
+                            & .video {
+                                .popup-btn {
+                                    width: 16px;
                                 }
                             }
                         }
