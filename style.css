@@ -1104,6 +1104,11 @@ body:has(.flipback-popup-container.show) {
                                 right: 18px;
                                 width: calc(100% - 36px);
                                 padding: 10px 0;
+                                bottom: 100px;
+
+                                i {
+                                    display: none;
+                                }
                             }
                         }
 
@@ -1157,7 +1162,7 @@ body:has(.flipback-popup-container.show) {
                                         }
 
                                         p {
-                                            font-size: 16px;
+                                            font-size: 14px;
                                             font-weight: 400;
                                             line-height: 21px;
                                         }
