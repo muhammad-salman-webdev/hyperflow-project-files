@@ -1907,3 +1907,23 @@ body.no-scroll {
         }
     }
 }
+
+/* Animation */
+.border-line-anim-container {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 1px;
+        width: 0%;
+        background-color: #131314;
+        transition: width 1s;
+    }
+
+    &.anim::before {
+        width: 100%;
+    }
+}
