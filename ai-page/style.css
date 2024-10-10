@@ -1723,7 +1723,7 @@ body.no-scroll {
 @media (max-width: 576px) {
     .fliping-content-section {
         .rotating-section-container {
-            max-width: 90%;
+            max-width: 100%;
 
             .rotating-section-content-sides-container {
                 height: unset;
@@ -1771,6 +1771,11 @@ body.no-scroll {
                         .side-toggle-btn {
                             bottom: 20px;
                             right: 20px;
+
+                            button {
+                                width: 30px;
+                                font-size: 16px;
+                            }
                         }
                     }
                 }
@@ -1813,6 +1818,11 @@ body.no-scroll {
                         .side-toggle-btn {
                             bottom: 20px;
                             right: 20px;
+
+                            button {
+                                width: 30px;
+                                font-size: 16px;
+                            }
                         }
                     }
                 }
@@ -1933,6 +1943,10 @@ body.no-scroll {
                 }
             }
         }
+    }
+
+    .e-con-inner:has(section.fliping-content-section[data-flip-card-container-identifier]) {
+        max-width: 92% !important;
     }
 }
 
