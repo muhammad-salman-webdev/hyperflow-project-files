@@ -290,12 +290,14 @@ body.no-scroll {
             transition: all 0.6s linear;
             border-radius: 16px;
             transform: rotateX(180deg);
-            box-shadow: -5px 3px 10px 7px #8080804f, 9px -8px 50px 0px #bfbdbd52;
             box-shadow: none;
 
             &.toggle {
                 transform: rotateX(0deg);
                 z-index: 99;
+                -webkit-box-shadow: 0px 0px 103px 51px rgba(40, 54, 248, 0.51);
+                -moz-box-shadow: 0px 0px 103px 51px rgba(40, 54, 248, 0.51);
+                box-shadow: 0px 0px 103px 51px rgba(40, 54, 248, 0.51);
             }
 
             .rotating-content-front-side-container {
@@ -429,8 +431,10 @@ body.no-scroll {
                 }
 
                 &:hover {
-                    /* box-shadow: 0px 0px 103px 70px rgba(40, 54, 248, 0.39); */
-                    box-shadow: 0px 0px 87px 13px rgba(40, 54, 248, 0.38);
+                    /* box-shadow: 0px 0px 87px 13px rgba(40, 54, 248, 0.38); */
+                    -webkit-box-shadow: 0px 0px 103px 51px rgba(40, 54, 248, 0.51);
+                    -moz-box-shadow: 0px 0px 103px 51px rgba(40, 54, 248, 0.51);
+                    box-shadow: 0px 0px 103px 51px rgba(40, 54, 248, 0.51);
 
                     .side-content-container {
                         background: #2835f8;
