@@ -2375,6 +2375,7 @@ body.no-scroll {
                 .rotating-section-content-sides-container {
                     height: unset;
                     aspect-ratio: 1 / 1.6;
+                    min-height: 540px;
 
                     &.small-img-center {
                         & .rotating-content-front-side-container {
@@ -2397,8 +2398,11 @@ body.no-scroll {
                                     h2 {
                                         font-size: 40px;
                                         line-height: 46px;
+                                        min-height: unset;
 
                                         &.dynamic {
+                                            min-height: unset;
+
                                             .blinker {
                                                 height: 44px;
                                                 transform: translate(-10px, 7px);
@@ -2429,6 +2433,8 @@ body.no-scroll {
                             .side-toggle-btn {
                                 bottom: 20px;
                                 right: 20px;
+                                width: 30px;
+                                font-size: 16px;
                             }
                         }
                     }
@@ -2475,6 +2481,8 @@ body.no-scroll {
                             .side-toggle-btn {
                                 bottom: 20px;
                                 right: 20px;
+                                width: 30px;
+                                font-size: 16px;
                             }
                         }
                     }
