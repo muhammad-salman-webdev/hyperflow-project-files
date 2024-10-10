@@ -2378,6 +2378,10 @@ body.no-scroll {
                     aspect-ratio: 1 / 1.6;
                     min-height: 540px;
 
+                    &.toggle {
+                        min-height: 700px;
+                    }
+
                     &.small-img-center {
                         & .rotating-content-front-side-container {
                             .side-content-container {
@@ -2635,6 +2639,8 @@ body.no-scroll {
                         & .backside-content-container {
                             & ._both {
                                 overflow: auto;
+                                display: inline-flex;
+                                justify-content: start;
 
                                 & .right_content {
                                     & ul {
@@ -2669,6 +2675,7 @@ body.no-scroll {
                                 & ._content {
                                     overflow: auto;
                                     padding-top: 20px;
+                                    display: block;
 
                                     ul {
                                         li {
@@ -2813,6 +2820,25 @@ body.no-scroll {
                 & .rotating-section-content-sides-container {
                     & .rotating-content-front-side-container {
                         & .side-content-container {
+                            & .side-toggle-btn {
+                                button {
+                                    width: 30px;
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .mobile-flip-cards-container {
+        & .fliping-content-section {
+            & .rotating-section-container {
+                & .rotating-section-content-sides-container {
+                    & .rotating-content-back-side-container {
+                        & .backside-content-container {
                             & .side-toggle-btn {
                                 button {
                                     width: 30px;
