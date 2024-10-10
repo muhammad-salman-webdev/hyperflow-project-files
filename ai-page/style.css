@@ -406,8 +406,8 @@ body.no-scroll {
 
                     .side-toggle-btn {
                         position: absolute;
-                        bottom: 44px;
-                        right: 40px;
+                        bottom: 32px;
+                        right: 32px;
 
                         button {
                             width: 40px;
