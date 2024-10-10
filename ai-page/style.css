@@ -619,6 +619,12 @@ body.no-scroll {
         }
 
         &.color-theme-pink {
+            &:has(.toggle) {
+                .rotating-section-content-sides-container {
+                    box-shadow: 0px 0px 87px 13px rgb(237, 82, 203, 0.39);
+                }
+            }
+
             .rotating-section-content-sides-container {
                 .rotating-content-front-side-container {
                     .side-content-container {
