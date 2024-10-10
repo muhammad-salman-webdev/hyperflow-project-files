@@ -623,13 +623,13 @@ body.no-scroll {
         }
 
         &.color-theme-pink {
-            &:has(.toggle) {
-                .rotating-section-content-sides-container {
-                    box-shadow: 0px 0px 87px 13px rgb(237, 82, 203, 0.39);
-                }
-            }
-
             .rotating-section-content-sides-container {
+                &.toggle {
+                    -webkit-box-shadow: 0px 0px 103px 51px rgba(237, 82, 203, 0.51);
+                    -moz-box-shadow: 0px 0px 103px 51px rgba(237, 82, 203, 0.51);
+                    box-shadow: 0px 0px 103px 51px rgba(237, 82, 203, 0.51);
+                }
+
                 .rotating-content-front-side-container {
                     .side-content-container {
                         ._content {
@@ -644,7 +644,9 @@ body.no-scroll {
                     }
 
                     &:hover {
-                        box-shadow: 0px 0px 87px 13px rgb(237, 82, 203, 0.39);
+                        -webkit-box-shadow: 0px 0px 103px 51px rgba(237, 82, 203, 0.51);
+                        -moz-box-shadow: 0px 0px 103px 51px rgba(237, 82, 203, 0.51);
+                        box-shadow: 0px 0px 103px 51px rgba(237, 82, 203, 0.51);
 
                         .side-content-container {
                             background: #ed52cb;
@@ -672,6 +674,12 @@ body.no-scroll {
 
         &.color-theme-green {
             .rotating-section-content-sides-container {
+                &.toggle {
+                    -webkit-box-shadow: 0px 0px 103px 51px rgba(0, 215, 16, 0.51);
+                    -moz-box-shadow: 0px 0px 103px 51px rgba(0, 215, 16, 0.51);
+                    box-shadow: 0px 0px 103px 51px rgba(0, 215, 16, 0.51);
+                }
+
                 .rotating-content-front-side-container {
                     .side-content-container {
                         ._content {
@@ -686,7 +694,9 @@ body.no-scroll {
                     }
 
                     &:hover {
-                        box-shadow: 0px 0px 87px 13px rgb(0, 215, 16, 0.39);
+                        -webkit-box-shadow: 0px 0px 103px 51px rgba(0, 215, 16, 0.51);
+                        -moz-box-shadow: 0px 0px 103px 51px rgba(0, 215, 16, 0.51);
+                        box-shadow: 0px 0px 103px 51px rgba(0, 215, 16, 0.51);
 
                         .side-content-container {
                             background: #00d710;
@@ -716,6 +726,12 @@ body.no-scroll {
 
         &.color-theme-orange {
             .rotating-section-content-sides-container {
+                &.toggle {
+                    -webkit-box-shadow: 0px 0px 103px 51px rgba(255, 107, 0, 0.51);
+                    -moz-box-shadow: 0px 0px 103px 51px rgba(255, 107, 0, 0.51);
+                    box-shadow: 0px 0px 103px 51px rgba(255, 107, 0, 0.51);
+                }
+
                 .rotating-content-front-side-container {
                     .side-content-container {
                         ._content {
@@ -730,7 +746,9 @@ body.no-scroll {
                     }
 
                     &:hover {
-                        box-shadow: 0px 0px 87px 13px rgb(255, 107, 0, 0.39);
+                        -webkit-box-shadow: 0px 0px 103px 51px rgba(255, 107, 0, 0.51);
+                        -moz-box-shadow: 0px 0px 103px 51px rgba(255, 107, 0, 0.51);
+                        box-shadow: 0px 0px 103px 51px rgba(255, 107, 0, 0.51);
 
                         .side-content-container {
                             background: #ff6b00;
