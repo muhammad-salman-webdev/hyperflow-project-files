@@ -2811,10 +2811,13 @@ body.no-scroll {
         & .fliping-content-section {
             & .rotating-section-container {
                 & .rotating-section-content-sides-container {
-                    & .rotating-content-back-side-container {
-                        & .backside-content-container {
-                            ._both {
-                                padding-top: 100px;
+                    & .rotating-content-front-side-container {
+                        & .side-content-container {
+                            & .side-toggle-btn {
+                                button {
+                                    width: 30px;
+                                    font-size: 16px;
+                                }
                             }
                         }
                     }
