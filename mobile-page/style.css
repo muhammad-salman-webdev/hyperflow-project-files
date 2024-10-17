@@ -1,4 +1,4 @@
-/* Updated 01 */
+/* Updated 02 */
 /* --------- */
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
@@ -2206,6 +2206,44 @@ body.no-scroll {
                                     &>div {
                                         flex-direction: column;
                                     }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .mobile-flip-cards-container {
+        & .fliping-content-section {
+            & .rotating-section-container {
+                & .rotating-section-content-sides-container {
+                    & .rotating-content-back-side-container {
+                        & .backside-content-container {
+                            & .side-toggle-btn {
+                                button {
+                                    width: 30px;
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .mobile-flip-cards-container {
+        & .fliping-content-section {
+            & .rotating-section-container {
+                & .rotating-section-content-sides-container {
+                    & .rotating-content-front-side-container {
+                        & .side-content-container {
+                            & .side-toggle-btn {
+                                button {
+                                    width: 30px;
+                                    font-size: 16px;
                                 }
                             }
                         }
