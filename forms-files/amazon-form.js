@@ -1,42 +1,42 @@
-const form = document.getElementById("amazon-page-bottom-form");
+// const form = document.getElementById("amazon-page-bottom-form");
 
-const allInputs = form.querySelectorAll(".forminator-field");
-allInputs.forEach((input) => {
-  console.log(input);
+// const allInputs = form.querySelectorAll(".forminator-field");
+// allInputs.forEach((input) => {
+//   console.log(input);
 
-  // Select the element you want to observe
-  const targetElement = input;
+//   // Select the element you want to observe
+//   const targetElement = input;
 
-  // Create a mutation observer
-  const observer = new MutationObserver(function (mutationsList) {
-    mutationsList.forEach(function (mutation) {
-      if (
-        mutation.type === "attributes" &&
-        mutation.attributeName === "class"
-      ) {
-        if (targetElement.classList.contains("forminator-has_error")) {
-          const style = `
-            <style>
-            
-            .simlar_from .forminator-design--default .forminator-has_error .forminator-input {
-    border-color: #E14942  !important;
-}
-            </style>
-            `;
-          document.body.innerHTML += style;
-        }
-      }
-    });
-  });
+//   // Create a mutation observer
+//   const observer = new MutationObserver(function (mutationsList) {
+//     mutationsList.forEach(function (mutation) {
+//       if (
+//         mutation.type === "attributes" &&
+//         mutation.attributeName === "class"
+//       ) {
+//         if (targetElement.classList.contains("forminator-has_error")) {
+//           const style = `
+//             <style>
 
-  // Define the configuration for the observer
-  const config = {
-    attributes: true, // Observe attribute changes
-    attributeFilter: ["class"], // Only observe changes to the class attribute
-  };
+//             .simlar_from .forminator-design--default .forminator-has_error .forminator-input {
+//     border-color: #E14942  !important;
+// }
+//             </style>
+//             `;
+//           document.body.innerHTML += style;
+//         }
+//       }
+//     });
+//   });
 
-  // Start observing the target element
-  observer.observe(targetElement, config);
+//   // Define the configuration for the observer
+//   const config = {
+//     attributes: true, // Observe attribute changes
+//     attributeFilter: ["class"], // Only observe changes to the class attribute
+//   };
 
-  // To stop observing at some point, use: observer.disconnect();
-});
+//   // Start observing the target element
+//   observer.observe(targetElement, config);
+
+//   // To stop observing at some point, use: observer.disconnect();
+// });
