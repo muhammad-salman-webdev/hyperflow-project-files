@@ -15,12 +15,6 @@ allInputs.forEach((input) => {
         mutation.attributeName === "class"
       ) {
         if (targetElement.classList.contains("forminator-has_error")) {
-          console.log("marggy");
-          console.log(targetElement.querySelector("input"));
-          console.log("------------");
-          targetElement.querySelector("input").style.borderColor =
-            "green !important";
-
           const style = `
             <style>
             
