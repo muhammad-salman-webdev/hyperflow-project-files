@@ -1,7 +1,10 @@
 const GetQuoteFormBtn = document.getElementById("show-quote-form-btn");
 const quoteFormMain = document.getElementById("quote-form-container");
+
 quoteFormMain.style.display = "none";
+
 const contactFormMain = document.getElementById("contact-form-hideOn");
+
 const formPrivacyContent = document.getElementById(
   "from-privcay-content-ShowOn"
 );
