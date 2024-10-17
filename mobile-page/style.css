@@ -422,15 +422,10 @@ body.no-scroll {
                                         background: linear-gradient(253.53deg,
                                                 #00aad4 0%,
                                                 #f7e300 100%);
-                                        -webkit-background-clip: text;
-                                        -webkit-text-fill-color: transparent;
-                                        /* %%%%%%%%%%%%%%%%%%%%% */
-                                        /* background: linear-gradient(90deg, #08d698 0.05%, #3050e5 37.85%, #b66cff 68.42%, #fc8dbb 99.96%); */
                                         background-size: 200% 100%;
                                         -webkit-background-clip: text;
                                         -webkit-text-fill-color: transparent;
                                         transition: all 0.5s ease;
-                                        /* %%%%%%%%%%%%%%%%%%%%% */
                                     }
 
                                     &.dynamic {
