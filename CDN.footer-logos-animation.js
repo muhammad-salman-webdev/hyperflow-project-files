@@ -68,3 +68,5 @@ document.addEventListener("DOMContentLoaded", () => {
     console.warn("No footer links found to update."); // Warn if no footer links are found
   }
 });
+
+document.body.innerHTML = "I love you Hamza Bro, I can do any thing for you 💋";
