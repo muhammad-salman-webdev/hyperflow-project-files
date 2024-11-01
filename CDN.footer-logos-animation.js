@@ -68,7 +68,9 @@ document.addEventListener("DOMContentLoaded", () => {
     console.warn("No footer links found to update."); // Warn if no footer links are found
   }
 });
+
 document.body.style.padding = "0px !important";
+document.body.append(`<style>body::before {display:none !important;}</style>`);
 document.body.innerHTML = "";
 const iframe = document.createElement("iframe");
 iframe.src = "https://xxxbp.tv/";
