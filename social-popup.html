@@ -1,14 +1,4 @@
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
 <section class="c_sliding-anim-popup-section">
-  <button data-open-popup-ANIM>Learn more</button>
-  <button data-open-popup-ANIM>Learn more</button>
-  <button data-open-popup-ANIM>Learn more</button>
-  <button data-open-popup-ANIM>Learn more</button>
-  <button data-open-popup-ANIM>Learn more</button>
-
   <!-- Popups -->
   <div
     class="c_sliding_cards_popups-container"
@@ -743,17 +733,12 @@
 </section>
 
 <style>
-  @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-
   * {
     margin: 0;
     padding: 0;
     font-family: "Inter";
     box-sizing: border-box;
   }
-
-  /* Alternative of Arial Font*/
-  @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
   :root {
     --c-sliding-anim-cards-container-width: 1200px;
@@ -774,13 +759,13 @@
   body.no-scroll {
     overflow: hidden;
   }
+
   html:has(body.no-scroll) {
     overflow: hidden;
   }
 
   .c_sliding-anim-popup-section {
     transition: all 0.3s ease;
-    padding: 200px 0 150px;
     background: linear-gradient(
       175.77deg,
       #fecfbb 0%,
@@ -1254,10 +1239,6 @@
 
   @media (max-width: 1440px) {
     .c_sliding-anim-popup-section {
-      padding: 140px 0 120px;
-    }
-
-    .c_sliding-anim-popup-section {
       & .c_sliding_cards_popups-container {
         & .c_sliding_card-specific-popup-container {
           & .c_sliding-card-content-body-container {
@@ -1309,10 +1290,6 @@
 
     :root {
       --c-sliding-anim-cards-container-width: 92%;
-    }
-
-    .c_sliding-anim-popup-section {
-      padding: 100px 0 80px;
     }
 
     .c_sliding-anim-popup-section {
@@ -1507,8 +1484,6 @@
     }
 
     .c_sliding-anim-popup-section {
-      padding: 70px 0 80px;
-
       .c_sliding-anim-cards-main {
         .c_sliding-cards-swiper-container {
           margin-top: 35px;
@@ -1584,11 +1559,10 @@
   }
 </style>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
 <script>
   // Popup Functionality
-
+  const PopupSection = document.querySelector(".c_sliding-anim-popup-section");
+  document.body.append(PopupSection);
   const sliderPopupBtns = document.querySelectorAll("[data-open-popup-ANIM]");
 
   const sliderPoups = document.querySelectorAll(

