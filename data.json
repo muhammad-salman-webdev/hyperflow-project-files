@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "uPVC Window Spraying – Transform Your Property at a Fraction of the Cost",
+    "category": "Residential",
+    "content": "Save Up to 75% When You Spray Rather Than Replace",
+    "image": "/assets/service.png"
+  },
+  {
+    "id": 2,
+    "title": "Industrial Coatings & Painting",
+    "category": "Commercial",
+    "content": "Paint Coatings and Industrial Paint Spraying",
+    "image": "/assets/service.png"
+  }
+]

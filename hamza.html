@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="content">
+      <div class="row" style="--var: 1"> Lorem ipsum dolor sit. </div>
+      <div class="row" style="--var: 2"> Lorem ipsum dolor sit. </div>
+      <div class="row" style="--var: 3"> Lorem ipsum dolor sit. </div>
+      <div class="row" style="--var: 4"> Lorem ipsum dolor sit. </div>
+    </div>
+  </body>
+</html>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    min-height: 100vh;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    position: relative;
+    border: 1px solid #c22d2d;
+    border-radius: 8px;
+    .row {
+      width: 100%;
+      height: 80px;
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      color: white;
+      padding: 0 20px;
+      font-family: system-ui;
+    }
+    &::before {
+      content: "";
+      width: 100%;
+      left: 0;
+      right: 0;
+      height: 80px;
+      position: absolute;
+      background: #c22d2d;
+      border-radius: 8px;
+      transition: top 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+        transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      opacity: 0;
+      transition-delay: 0.2s;
+    }
+    &:hover::before {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+    .content {
+      position: relative;
+    }
+
+    .content::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 80px; /* height of each row */
+      background-color: rgba(0, 0, 0, 0.1); /* style as needed */
+      transition: top 0.3s ease; /* Smooth transition */
+    }
+
+    .content:hover .row:hover::before {
+      top: calc((var(--var) - 1) * 80px); /* Adjust based on --var value */
+    }
+
+    &:has(.row:nth-child(1):hover)::before {
+      top: 0;
+    }
+    &:has(.row:nth-child(2):hover)::before {
+      top: 80px;
+    }
+    &:has(.row:nth-child(3):hover)::before {
+      top: 160px;
+    }
+    &:has(.row:nth-child(4):hover)::before {
+      top: 240px;
+    }
+  }
+</style>

@@ -1,0 +1,120 @@
+<style>
+  #social_blank_swiper_section {
+    position: relative;
+    overflow: hidden;
+  }
+  #social_blank_swiper_section::before,
+  #social_blank_swiper_section::after {
+    content: "";
+    height: 100%;
+    width: 1px;
+    z-index: 1;
+    position: absolute;
+    top: 100%;
+    background-color: white;
+  }
+
+  #social_blank_swiper_section::before {
+    left: 20px;
+  }
+
+  #social_blank_swiper_section::after {
+    right: 20px;
+  }
+
+  #social_blank_swiper_section.animated::before,
+  #social_blank_swiper_section.animated::after {
+    animation: growHeight 1s forwards;
+  }
+</style>
+
+<script>
+  document.addEventListener("scroll", function () {
+    const sociLiner = document.querySelector(" #social_blank_swiper_section ");
+    const rect = sociLiner.getBoundingClientRect();
+    const inView = rect.top <= window.innerHeight && rect.bottom >= 0;
+
+    if (inView) {
+      sociLiner.classList.add("animated");
+    }
+  });
+</script>
+
+<style>
+  @media (max-width: 550px) {
+    #soci_liner .e-con-inner {
+      width: 100% !important;
+      padding-left: 0;
+      padding-right: 0;
+      max-width: 100% !important;
+    }
+  }
+  @keyframes growHeight {
+    from {
+      top: 100%;
+    }
+    to {
+      top: 0%;
+    }
+  }
+  .page-id-8777 .soci_liner {
+    overflow: hidden;
+  }
+  .page-id-8777 .soci_liner::before,
+  .page-id-8777 .soci_liner::after {
+    content: "";
+    height: 100%;
+    width: 1px;
+    z-index: 1;
+    position: absolute;
+    top: 100%;
+    background-color: white;
+  }
+
+  .page-id-8777 .soci_liner::before {
+    left: 20px;
+  }
+
+  .page-id-8777 .soci_liner::after {
+    right: 20px;
+  }
+
+  .page-id-8777 .soci_liner.animated::before,
+  .page-id-8777 .soci_liner.animated::after {
+    animation: growHeight 1s forwards;
+  }
+  @media (max-width: 576px) {
+    .page-id-8777 .soci_liner::before,
+    .page-id-8777 .soci_liner::after {
+      display: none;
+    }
+
+    #social_blank_swiper_section::before {
+      left: 10px;
+    }
+
+    #social_blank_swiper_section::after {
+      right: 10px;
+    }
+  }
+  @media (max-width: 365px) {
+    #social-hero-heading {
+      min-width: 340px;
+      margin-left: -7px;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("scroll", function () {
+    const sociLiner = document.querySelector(".page-id-8777 .soci_liner");
+    const rect = sociLiner.getBoundingClientRect();
+    const inView = rect.top <= window.innerHeight && rect.bottom >= 0;
+
+    if (inView) {
+      sociLiner.classList.add("animated");
+    }
+  });
+</script>
+
+<!--  -->
