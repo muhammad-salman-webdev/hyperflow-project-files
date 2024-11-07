@@ -1,0 +1,35 @@
+<div id="e-com-gsap-animation-frame-container"></div>
+<script>
+  // Create the iframe element
+  const iframe = document.createElement("iframe");
+  iframe.style.width = "100%"; // Set the width
+  iframe.frameBorder = "0"; // Remove border
+  iframe.style.overflow = "hidden"; // Hide any overflow from iframe
+
+  // Append the iframe to the container
+  const container = document.getElementById(
+    "e-com-gsap-animation-frame-container"
+  );
+  container.appendChild(iframe);
+
+  // Set the source URL of the iframe
+  iframe.src =
+    "https://muhammad-salman-webdev.github.io/hyperflow-project-files/e-com-gsap-anim.html";
+
+  // Function to adjust iframe height based on content
+  function adjustIframeHeight() {
+    const iframeDocument = iframe.contentWindow.document;
+    iframe.style.height = iframeDocument.documentElement.scrollHeight + "px";
+  }
+
+  // Listen for the iframe load event to trigger height adjustment
+  iframe.onload = function () {
+    // Adjust height when the iframe content has loaded
+    adjustIframeHeight();
+
+    // Optionally, you can also listen to changes inside the iframe content
+    const iframeDocument = iframe.contentWindow.document;
+    iframeDocument.addEventListener("DOMContentLoaded", adjustIframeHeight);
+    iframe.contentWindow.addEventListener("resize", adjustIframeHeight);
+  };
+</script>
