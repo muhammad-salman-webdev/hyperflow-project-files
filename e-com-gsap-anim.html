@@ -12539,3 +12539,10 @@
     // Initial call to display the first set of images
   </script>
 </div>
+<script>
+    // Send the content height to the parent page
+    window.onload = function () {
+      const contentHeight = document.documentElement.scrollHeight;
+      window.parent.postMessage({ type: 'resize', height: contentHeight }, '*');
+    };
+  </script> 
