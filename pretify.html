@@ -1,39 +1,136 @@
-<div id="e-com-gsap-animation-frame-container"></div>
-<script>
-  // Create the iframe element
-  const iframe = document.createElement("iframe");
-  iframe.style.width = "100%"; // Set the width
-  iframe.style.height = "auto"; // Set the height as auto
-  iframe.style.frameBorder = "0"; // Remove border
-  iframe.style.overflow = "hidden"; // Hide any overflow from iframe
-  iframe.style.background = "transparent"; // Set iframe background to transparent
-  iframe.style.minHeight = "max-content"; // Ensure the minimum height is based on the content size
+<?php
+/**
+ * The header.
+ *
+ * This is the template that displays all of the <head> section and everything up until main.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package WordPress
+ * @subpackage Twenty_Twenty_One
+ * @since Twenty Twenty-One 1.0
+ */
 
-  // Append the iframe to the container
-  const container = document.getElementById(
-    "e-com-gsap-animation-frame-container"
-  );
+?>
+<!doctype html>
+<html <?php language_attributes(); ?> <?php twentytwentyone_the_html_classes(); ?>>
+<head>
+	<meta charset="<?php bloginfo( 'charset' ); ?>" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<?php wp_head(); ?>
+</head>
 
-  container.appendChild(iframe);
+<body <?php body_class(); ?>>
+<header>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="flex-header">	
+					<div class="logo">
+						<?php echo get_custom_logo(); ?>
+					</div>
+					<div class="contact">
+						<a href="tel:2149353800">214.935.3800</a>
+						<a href="mailto:info@media2wayradio.com">info@media2wayradio.com</a>
+					</div>
+					<div class="menu">
+					    <div class="login-avatar" >
+					        <div class="img" >
+					            <img src="https://static.vecteezy.com/system/resources/thumbnails/005/544/718/small_2x/profile-icon-design-free-vector.jpg"/>
+					        </div>
+					        <ul>
+					            <li>
+					                <a href="#">View Enteries</a>
+					                
+					            </li>
+					            <li>
+					                <a href="#">Logout</a>
+					            </li>
+					        </ul>
+					    </div>
+					    <a href="">Login / Register</a>
+						<span style="font-size:30px;cursor:pointer" onclick="openNav()">
+							<div class="bar1"></div>
+							<div class="bar2"></div>
+							<div class="bar3"></div>
+						</span>
+						<div id="mySidenav" class="sidenav">
+  							<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  							<?php wp_nav_menu( array( 'menu' => 'Main menu' ) ); ?>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
 
-  // Set the source URL of the iframe
-  iframe.src =
-    "https://muhammad-salman-webdev.github.io/hyperflow-project-files/e-com-gsap-anim.html";
-
-  // Function to adjust iframe height based on content
-  function adjustIframeHeight() {
-    const iframeDocument = iframe.contentWindow.document;
-    iframe.style.height = iframeDocument.documentElement.scrollHeight + "px";
-  }
-
-  // Listen for the iframe load event to trigger height adjustment
-  iframe.onload = function () {
-    // Adjust height when the iframe content has loaded
-    adjustIframeHeight();
-
-    // Optionally, you can also listen to changes inside the iframe content
-    const iframeDocument = iframe.contentWindow.document;
-    iframeDocument.addEventListener("DOMContentLoaded", adjustIframeHeight);
-    iframe.contentWindow.addEventListener("resize", adjustIframeHeight);
-  };
-</script>
+<style>
+    div.menu {
+    display: flex;
+    align-items: center;
+}
+.menu > a {
+    min-width: max-content;
+    display: block;
+    margin-right: 30px;
+}
+.menu .login-avatar {
+    position: relative;
+    margin-right: 20px;
+}
+.menu .login-avatar .img {
+    width: 40px;
+    border: 1px solid black;
+    border-radius: 50%;
+    overflow:hidden;
+    img{
+        width: 100%;
+    }
+}
+.menu .login-avatar ul {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 5px 6px;
+    background: white;
+    box-shadow: 0px 0px 4px 2px #879388;
+    z-index: 2;
+    min-width: 140px;
+    border-radius: 4px;
+    list-style: none;
+    font-size: 16px;
+    gap: 2px;
+    user-select:none; 
+    opacity: 0;
+    transition: opacity .3s ease;
+    display:none;
+    li {
+        a {
+            color: white;
+            padding: 4px 10px;
+            border-radius: 2px;
+            display: block;
+            color: green;
+            transition: all .3s ease;
+            text-decoration: none;
+        
+        &:hover { color:white;
+            
+                       background: #235132bd; 
+        }
+        }
+    }
+}
+.menu .login-avatar:hover ul { 
+    user-select:auto;
+    z-index: 2;
+    opacity: 1;
+    display:flex;
+}
+div.menu .login-avatar ~ a {
+           color: green;
+       }
+</style>
+</body>
+</html
